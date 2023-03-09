@@ -1,6 +1,6 @@
 import java.awt.*;
 import javax.swing.*;
-import com.*;
+import coore.*;
 
 
 class start{

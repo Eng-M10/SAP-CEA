@@ -1,5 +1,4 @@
-package com;
-
+package coore;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -72,11 +71,11 @@ public class Login extends JFrame implements ActionListener{
 		if(e.getSource()==btnAccess){
 			
 			if(verify()){
-					setVisible(false);
+					dispose();
 					new Admin();
 			}
 			else{
-				  JOptionPane.showMessageDialog(f,"Wrong Password. try Again!","Alert",JOptionPane.WARNING_MESSAGE);
+				  JOptionPane.showMessageDialog(null,"Wrong Password. try Again!","Alert",JOptionPane.WARNING_MESSAGE);
 			}
 
 		}
