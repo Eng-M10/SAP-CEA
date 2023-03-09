@@ -76,7 +76,7 @@ public class Login extends JFrame implements ActionListener{
 					new Admin();
 			}
 			else{
-				System.out.println("***********");
+				  JOptionPane.showMessageDialog(f,"Wrong Password. try Again!","Alert",JOptionPane.WARNING_MESSAGE);
 			}
 
 		}

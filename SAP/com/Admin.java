@@ -8,10 +8,15 @@ public class Admin extends JFrame implements ActionListener{
 		Jbutton btnLoadData,btnRegisterAnswers,btnRegisterCourses,btnGenerateRanking,btnCheck;
 		JLabel Label1,Label2,Label3,Label4,Label5;
 
+		ImageIcon downloadImg = new ImageIcon("C:/Users/MuviDesktop/F  E  T/3 ANO/1st Semestre/PAJ/SAP-CEA/SAPcom/imgAdmin/download.png"); 
+		ImageIcon matrixImg = new ImageIcon("C:/Users/MuviDesktop/F  E  T/3 ANO/1st Semestre/PAJ/SAP-CEA/SAPcom/imgAdmin/contact-form.png"); 
+		ImageIcon checkImg = new ImageIcon("C:/Users/MuviDesktop/F  E  T/3 ANO/1st Semestre/PAJ/SAP-CEA/SAPcom/imgAdmin/checked.png"); 
+		ImageIcon courseImg = new ImageIcon("C:/Users/MuviDesktop/F  E  T/3 ANO/1st Semestre/PAJ/SAP-CEA/SAPcom/imgAdmin/books-stack-of-three.png"); 
+		ImageIcon rankingImg = new ImageIcon("C:/Users/MuviDesktop/F  E  T/3 ANO/1st Semestre/PAJ/SAP-CEA/SAPcom/imgAdmin/search-engine.png"); 
 
 		public Admin(){
 			super("Administrator - Dashboard");
-			setSize(1366,720);
+			setSize(1280,720);
 			setResizable(false);
 			setLocationRelativeTo(null);
 			setLayout(null);
@@ -31,8 +36,11 @@ public class Admin extends JFrame implements ActionListener{
 			btnGenerateRanking = new JButton("Generate ranking");
 			btnCheck = new JButton("Correct exams");
 
+			//initialize labels/imagescontainer
 
-			//
+			//position
+
+
 			
 
 		}
@@ -84,5 +92,7 @@ public class PlaceholderTextField extends JTextField {
         }
     }
 
-    private static class PlaceholderTextFieldUI extends BasicTextFieldUI {}
+    private static class PlaceholderTextFieldUI extends BasicTextFieldUI {
+
+    }
 }
