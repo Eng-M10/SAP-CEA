@@ -13,7 +13,7 @@ public class LoaderCorrect extends JFrame implements ActionListener {
                 setResizable(true);
                 setLocationRelativeTo(null);
                 setLayout(null);
-                setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                setDefaultCloseOperation(this.DISPOSE_ON_CLOSE);
 
                 textMsg = new JLabel("Without data to Process");
                 btnReturn = new JButton("Return Menu");
@@ -21,8 +21,8 @@ public class LoaderCorrect extends JFrame implements ActionListener {
 
 
 
-                textMsg.setFont(new Font("Arial",Font.PLAIN,64));
-                textMsg.setBounds(243,221,566,148);
+                textMsg.setFont(new Font("Arial",Font.PLAIN,24));
+                textMsg.setBounds(243,221,800,148);
                 btnReturn.setBounds(331,509,300,63);
 
                 add(textMsg);

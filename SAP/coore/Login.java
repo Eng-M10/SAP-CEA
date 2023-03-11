@@ -13,7 +13,7 @@ public class Login extends JFrame implements ActionListener{
 	public Login(){
 			super("SAP-CEA | Login");
 			setSize(616,735);
-			setResizable(true);
+			setResizable(false);
 			setLayout(null);
 			setLocationRelativeTo(null);
 			initFrameElements();

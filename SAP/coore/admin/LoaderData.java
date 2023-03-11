@@ -13,7 +13,7 @@ public class LoaderData extends JFrame implements ActionListener{
         setResizable(false);
         setLocationRelativeTo(null);
         setLayout(null);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(this.DISPOSE_ON_CLOSE);
         tempElements();
         setVisible(true);
         btnback.addActionListener(this::actionPerformed);

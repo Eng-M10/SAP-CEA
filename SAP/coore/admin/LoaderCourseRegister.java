@@ -15,7 +15,7 @@ public class LoaderCourseRegister extends JFrame implements ActionListener {
         setResizable(true);
         setLocationRelativeTo(null);
         setLayout(null);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(this.DISPOSE_ON_CLOSE);
         Elements_of_Frame();
         setVisible(true);
 

@@ -10,12 +10,6 @@ public class Admin extends JFrame implements ActionListener{
 		private JButton btnLoadData,btnRegisterAnswers,btnRegisterCourses,btnGenerateRanking,btnCheck;
 		private JLabel downLabel,matLabel,checLabel,courLabel,rankLabel;
 
-		//new javax.swing.ImageIcon("C:\\Users\\Muvi\\Desktop\\F  E  T\\2 ANO\\2nd Semestre\\Lab.Inf -II\\Trabalhos\\Zara-eStore\\ui\\zara_logo.png")importing images
-		//ImageIcon downloadImg = new ImageIcon("C:\Users/MuviDesktop/'F  E  T'/'3 ANO'/'1st Semestre'/PAJ/SAP-CEA/SAP/com/imgAdmin/download.png");
-		//ImageIcon matrixImg = new ImageIcon("C:/Users/MuviDesktop/'F  E  T'/'3 ANO'/'1st Semestre'/PAJ/SAP-CEA/SAP/com/imgAdmin/contact-form.png");
-		//ImageIcon checkImg = new ImageIcon("C:/Users/MuviDesktop/'F  E  T'/'3 ANO'/'1st Semestre'/PAJ/SAP-CEA/SAP/com/imgAdmin/checked.png");
-		//ImageIcon courseImg = new ImageIcon("C:/Users/MuviDesktop/'F  E  T'/'3 ANO'/'1st Semestre'/PAJ/SAP-CEA/SAP/com/imgAdmin/books-stack-of-three.png");
-		//ImageIcon rankingImg = new ImageIcon("C:/Users/MuviDesktop/'F  E  T'/'3 ANO'/'1st Semestre'/PAJ/SAP-CEA/SAP/com/imgAdmin/search-engine.png"); */
 
 
 		public Admin(){
@@ -60,7 +54,7 @@ public class Admin extends JFrame implements ActionListener{
 			ImageIcon rankingImg = new ImageIcon(getClass().getResource("engine.png"));
 
 
-			//atribute images to labels/imagescontainer
+			//Atribute images to labels/imagescontainer
 			downLabel = new JLabel(downloadImg);
 			matLabel = new JLabel(matrixImg);
 			checLabel = new JLabel(checkImg);
@@ -122,7 +116,6 @@ public class Admin extends JFrame implements ActionListener{
 			else if(event.getSource()==btnRegisterCourses){
 				new LoaderCourseRegister();
 
-
 			}
 			else{
 				new LoaderRanking();
@@ -132,48 +125,3 @@ public class Admin extends JFrame implements ActionListener{
 
 		}
 }
-
-/*public class PlaceholderTextField extends JTextField {
-
-    private String placeholder;
-
-    public PlaceholderTextField(String placeholder) {
-        this.placeholder = placeholder;
-        setUI(new PlaceholderTextFieldUI());
-    }
-
-    public void setPlaceholder(String placeholder) {
-        this.placeholder = placeholder;
-        repaint();
-    }
-
-    public String getPlaceholder() {
-        return placeholder;
-    }
-
-    @Override
-    protected void paintComponent(Graphics g) {
-        super.paintComponent(g);
-
-        if (getText().isEmpty() && ! (FocusListener)super.getListeners(FocusListener.class)[0].equals(new FocusListener() {
-            @Override
-            public void focusGained(FocusEvent e) {
-                repaint();
-            }
-
-            @Override
-            public void focusLost(FocusEvent e) {
-                repaint();
-            }
-        })) {
-            int x = getInsets().left;
-            int y = g.getFontMetrics().getAscent() + getInsets().top;
-            g.drawString(placeholder, x, y);
-        }
-    }
-
-    private static class PlaceholderTextFieldUI extends BasicTextFieldUI {
-
-    }
-}
-*/
