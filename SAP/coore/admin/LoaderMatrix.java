@@ -20,6 +20,10 @@ public class LoaderMatrix extends JFrame implements ActionListener{
             setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             init();
             setVisible(true);
+
+            btnADD.addActionListener(this::actionPerformed);
+            btnBack.addActionListener(this::actionPerformed);
+            btnSave.addActionListener(this::actionPerformed);
         }
 
         protected void init(){

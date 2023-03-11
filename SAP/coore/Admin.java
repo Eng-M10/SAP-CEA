@@ -11,25 +11,21 @@ public class Admin extends JFrame implements ActionListener{
 		private JLabel downLabel,matLabel,checLabel,courLabel,rankLabel;
 
 		//new javax.swing.ImageIcon("C:\\Users\\Muvi\\Desktop\\F  E  T\\2 ANO\\2nd Semestre\\Lab.Inf -II\\Trabalhos\\Zara-eStore\\ui\\zara_logo.png")importing images
-		/*private	ImageIcon downloadImg = new ImageIcon("C:\\Users\\Muvi\\Desktop\\F  E  T\\3 ANO\\1st Semestre\\PAJ\\SAP-CEA\\SAP\\com\\imgAdmin\\books.png");
-	private	ImageIcon matrixImg = new ImageIcon("C:\\Users\\Muvi\\Desktop\\F  E  T\\3 ANO\\1st Semestre\\PAJ\\SAP-CEA\\SAP\\com\\imgAdmin\\books.png");
-	private	ImageIcon checkImg = new ImageIcon("C:\\Users\\Muvi\\Desktop\\F  E  T\\3 ANO\\1st Semestre\\PAJ\\SAP-CEA\\SAP\\com\\imgAdmin\\books.png");
-	private ImageIcon courseImg = new ImageIcon("C:\\Users\\Muvi\\Desktop\\F  E  T\\3 ANO\\1st Semestre\\PAJ\\SAP-CEA\\SAP\\com\\imgAdmin\\books.png");
-	private	ImageIcon rankingImg = new ImageIcon("C:\\Users\\Muvi\\Desktop\\F  E  T\\3 ANO\\1st Semestre\\PAJ\\SAP-CEA\\SAP\\com\\imgAdmin\\books.png");
-	ImageIcon downloadImg = new ImageIcon("C:\Users/MuviDesktop/'F  E  T'/'3 ANO'/'1st Semestre'/PAJ/SAP-CEA/SAP/com/imgAdmin/download.png");
-		ImageIcon matrixImg = new ImageIcon("C:/Users/MuviDesktop/'F  E  T'/'3 ANO'/'1st Semestre'/PAJ/SAP-CEA/SAP/com/imgAdmin/contact-form.png"); 
-		ImageIcon checkImg = new ImageIcon("C:/Users/MuviDesktop/'F  E  T'/'3 ANO'/'1st Semestre'/PAJ/SAP-CEA/SAP/com/imgAdmin/checked.png"); 
-		ImageIcon courseImg = new ImageIcon("C:/Users/MuviDesktop/'F  E  T'/'3 ANO'/'1st Semestre'/PAJ/SAP-CEA/SAP/com/imgAdmin/books-stack-of-three.png"); 
-		ImageIcon rankingImg = new ImageIcon("C:/Users/MuviDesktop/'F  E  T'/'3 ANO'/'1st Semestre'/PAJ/SAP-CEA/SAP/com/imgAdmin/search-engine.png"); */
+		//ImageIcon downloadImg = new ImageIcon("C:\Users/MuviDesktop/'F  E  T'/'3 ANO'/'1st Semestre'/PAJ/SAP-CEA/SAP/com/imgAdmin/download.png");
+		//ImageIcon matrixImg = new ImageIcon("C:/Users/MuviDesktop/'F  E  T'/'3 ANO'/'1st Semestre'/PAJ/SAP-CEA/SAP/com/imgAdmin/contact-form.png");
+		//ImageIcon checkImg = new ImageIcon("C:/Users/MuviDesktop/'F  E  T'/'3 ANO'/'1st Semestre'/PAJ/SAP-CEA/SAP/com/imgAdmin/checked.png");
+		//ImageIcon courseImg = new ImageIcon("C:/Users/MuviDesktop/'F  E  T'/'3 ANO'/'1st Semestre'/PAJ/SAP-CEA/SAP/com/imgAdmin/books-stack-of-three.png");
+		//ImageIcon rankingImg = new ImageIcon("C:/Users/MuviDesktop/'F  E  T'/'3 ANO'/'1st Semestre'/PAJ/SAP-CEA/SAP/com/imgAdmin/search-engine.png"); */
 
 
 		public Admin(){
 			
 			super("Administrator - Dashboard");
-			setSize(1280,800);
+			setExtendedState(JFrame.MAXIMIZED_BOTH);
 			setResizable(true);
 			setLocationRelativeTo(null);
 			setLayout(null);
+			getContentPane().setBackground(new Color(25,65,128));
 			setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			initElementsFrame();
 			setVisible(true);
@@ -55,20 +51,21 @@ public class Admin extends JFrame implements ActionListener{
 			btnGenerateRanking = new JButton("Generate ranking");
 			btnCheck = new JButton("Correct exams");
 
+
+
+			ImageIcon downloadImg = new ImageIcon(getClass().getResource("download.png"));
+			ImageIcon matrixImg = new ImageIcon(getClass().getResource("form.png"));
+			ImageIcon checkImg = new ImageIcon(getClass().getResource("checked.png"));
+			ImageIcon courseImg = new ImageIcon(getClass().getResource("books.png"));
+			ImageIcon rankingImg = new ImageIcon(getClass().getResource("engine.png"));
+
+
 			//atribute images to labels/imagescontainer
-			downLabel = new JLabel("CARREGAR DADOS");
-			matLabel = new JLabel("Registrar Matriz");
-			checLabel = new JLabel("CORRIGIR EXAMES");
-			courLabel = new JLabel("REGISTRAR CURSO");
-			rankLabel = new JLabel("GERAR RANKING");
-
-
-			downLabel.setIcon(new javax.swing.ImageIcon("C:\\Users\\Muvi\\Desktop\\F  E  T\\3 ANO\\1st Semestre\\PAJ\\SAP-CEA\\SAP\\com\\download.png"));
-			matLabel.setIcon(new javax.swing.ImageIcon("C:\\Users\\Muvi\\Desktop\\F  E  T\\3 ANO\\1st Semestre\\PAJ\\SAP-CEA\\SAP\\com\\form.png"));
-			checLabel.setIcon(new javax.swing.ImageIcon("C:\\Users\\Muvi\\Desktop\\F  E  T\\3 ANO\\1st Semestre\\PAJ\\SAP-CEA\\SAP\\com\\checked.png"));
-			courLabel.setIcon(new javax.swing.ImageIcon("C:\\Users\\Muvi\\Desktop\\F  E  T\\3 ANO\\1st Semestre\\PAJ\\SAP-CEA\\SAP\\com\\books.png"));
-			rankLabel.setIcon(new javax.swing.ImageIcon("C:\\Users\\Muvi\\Desktop\\F  E  T\\3 ANO\\1st Semestre\\PAJ\\SAP-CEA\\SAP\\com\\engine.png"));
-			
+			downLabel = new JLabel(downloadImg);
+			matLabel = new JLabel(matrixImg);
+			checLabel = new JLabel(checkImg);
+			courLabel = new JLabel(courseImg);
+			rankLabel = new JLabel(rankingImg);
 
 			//position firstly the labels
 
@@ -76,9 +73,8 @@ public class Admin extends JFrame implements ActionListener{
 			matLabel.setBounds(511,73,197,200);
 			checLabel.setBounds(942,73,197,200);
 			courLabel.setBounds(49,411,197,200);
-			rankLabel.setBounds(511,411,197,200);
 
-			//position finaly the buttons
+			//position finally the buttons
 
 
 			btnLoadData.setBounds(32,294,282,66);
