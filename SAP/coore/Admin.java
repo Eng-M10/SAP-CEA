@@ -3,6 +3,7 @@ import java.awt.event.*;
 import java.awt.*;
 import javax.swing.*;
 import coore.admin.*;
+import coore.dataPanel.*;
 
 public class Admin extends JFrame implements ActionListener{
 		
@@ -19,7 +20,7 @@ public class Admin extends JFrame implements ActionListener{
 			setResizable(true);
 			setLocationRelativeTo(null);
 			setLayout(null);
-			getContentPane().setBackground(new Color(25,65,128));
+			getContentPane().setBackground(new Color(10,115,152));
 			setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			initElementsFrame();
 			setVisible(true);
@@ -67,6 +68,7 @@ public class Admin extends JFrame implements ActionListener{
 			matLabel.setBounds(511,73,197,200);
 			checLabel.setBounds(942,73,197,200);
 			courLabel.setBounds(49,411,197,200);
+			rankLabel.setBounds(511,411,197,200);
 
 			//position finally the buttons
 
@@ -101,7 +103,7 @@ public class Admin extends JFrame implements ActionListener{
 		public void actionPerformed(ActionEvent event){
 
 			if(event.getSource()==btnLoadData){
-				new LoaderData();
+				new UserAdmin();
 
 			}
 			else if(event.getSource()==btnRegisterAnswers){

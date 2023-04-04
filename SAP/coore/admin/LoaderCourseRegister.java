@@ -81,6 +81,11 @@ public class LoaderCourseRegister extends JFrame implements ActionListener {
             File selectedFile = fileChooser.getSelectedFile();
         }
     }
+    private boolean validator(){
+        if(Textfirst.getText().equals("") && Textsecond.getText().equals("") && Textthird.getText().equals("") && Textfourth.getText().equals(""))
+            return false;
+        else return true;
+    }
     @Override
     public void actionPerformed(ActionEvent e) {
             if(e.getSource()==btnADD) addFile();
@@ -88,8 +93,12 @@ public class LoaderCourseRegister extends JFrame implements ActionListener {
             else if (e.getSource()==btnBack) dispose();
 
             else{
+                if (validator()){
             JOptionPane.showMessageDialog(null,"Course Registed Sucessfully","INFO!!",JOptionPane.PLAIN_MESSAGE);
-            dispose();}
+                dispose();}
+                else
+            JOptionPane.showMessageDialog(null,"Some fields are EMPTY!!!","INFO!!",JOptionPane.WARNING_MESSAGE);
+            }
 
 
     }
